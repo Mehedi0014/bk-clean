@@ -1,0 +1,1010 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==================================
+   Base styles: opinionated defaults
+   ================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* =================================
+   Browser Upgrade Prompt
+   ================================= */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ===================================
+   Author's custom styles
+   =================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================
+   Helper classes
+   =================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+******************************************************************************************************************
+******************************************************************************************************************
+******************************************************************************************************************
+*
+*/
+
+
+
+/*
+base color : rgba(0, 150, 63, 1);
+New Color : #7db119
+*/
+
+
+/*
+*
+*
+* Home page ==================================================================================
+*
+*
+*/
+
+
+/* Navigation Section ........................... */
+
+/* Sub menu part */
+#sub_menu {
+	background-color: #ececec;
+	padding: 16px 0;
+	color: gray;
+	font-weight: 500;
+}
+
+#sub_menu i {
+    font-size: 20px;
+    padding-left: 5px;
+    color: #7db119;
+}
+
+#sub_menu img {
+    padding-right: 5px;
+}
+
+#sub_menu .for_padding_left {
+    padding-left: 35px;
+}
+
+#sub_menu .container .row .col-lg-3:nth-child(2) {
+	padding-left: 60px;
+}
+
+@media(max-width: 991px){
+    #sub_menu .container .row .col-lg-3:nth-child(1) {
+        padding: 0 0px 10px 15px;
+    }
+
+    #sub_menu .container .row .col-lg-3:nth-child(2) {
+        padding: 0 0 10px 15px;
+    }    
+}
+
+@media(max-width: 575px){
+    #sub_menu .container .row .col-lg-3:nth-child(3) {
+        padding: 0 0px 15px 15px;
+    }    
+}
+
+
+
+/* Main Menu Part  */
+
+#main_menu {
+    border-bottom: 5px solid #7db119;
+}
+
+#main_menu .navbar-nav.mr-auto {
+	margin: 0 auto;
+}
+
+
+/* Slider section ....................................... */
+#slider,
+#slider .container-fluid,
+#slider .container-fluid .row,
+#slider .container-fluid .row .col-12 {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Image Gallery Section .............................. */
+
+#image_gallery {
+	background-color: #fafafa;
+	margin-top: 30px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#image_gallery h1 {
+    margin: 0 auto;
+    color: #7db119;
+}
+
+#image_gallery h1::after {
+	content: "";
+	display: block;
+	border-bottom: 5px solid #7db119;
+	padding: 0px 0px;
+	margin: 8px 0 20px 0;
+}
+
+#image_gallery .image_with_text {
+    position: relative;
+}
+
+#image_gallery img {
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid #ddd;
+	border-radius: 0px;
+	padding: 5px;
+}
+
+#image_gallery .second_row {
+	margin-top: 15px;
+}
+
+#image_gallery .custom_image_gallery_button {
+    transition: .7s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #7db119;
+    border: 1px solid #7db119;
+}
+
+#image_gallery h5 {
+	color: #7db119;
+	padding: 9px 0 0 0;
+	text-transform: uppercase;
+}
+
+
+@media(max-width: 575px){
+    #image_gallery h5 {
+        padding: 10px 0 20px 0px;
+    }
+}
+
+/* Make Hover style */
+#image_gallery .image_with_text:hover img  {
+    opacity: .5;
+}
+
+#image_gallery .image_with_text:hover .custom_image_gallery_button {
+    opacity: 1;
+}
+
+
+
+
+
+/* CEO image and Message .............................. */
+
+#ceo_phpto_and_message {
+	margin-top: 55px;
+}
+
+#ceo_phpto_and_message .about_ceo {
+    /* background-color: #ddd; */
+}
+
+#ceo_phpto_and_message .container:last-child {
+	background-color: #7db119;
+	padding-left: 0;
+	border-radius: 20px 0 0 20px;
+}
+
+#ceo_phpto_and_message .about_ceo h1 {
+	margin: 0 auto;
+	color: #7db119;
+	padding: 40px 0 0 0;
+}
+
+#ceo_phpto_and_message .about_ceo h1::after {
+	content: "";
+	display: block;
+	border-bottom: 5px solid #7db119;
+	padding: 0px 0px;
+	margin: 8px 0 20px 0;
+}
+
+
+#ceo_phpto_and_message .container {
+    color: #ccc;
+}
+
+#ceo_phpto_and_message .container img {
+	width: 100%;
+	height: auto;
+	padding: 2px 0 3px 0px;
+	max-height: 270px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+#ceo_phpto_and_message .container p {
+	font-size: 23px;
+}
+
+
+
+
+/* Contact section ............................ */
+
+#contact_form_and_details {
+	margin-top: 55px;
+}
+
+#contact_form_and_details h1 {
+    text-align: center;
+    color: #7db119;
+}
+
+#contact_form_and_details h1::after {
+	content: "";
+	display: block;
+	border-bottom: 5px solid #7db119;
+	padding: 5px 0 0 0;
+	margin: 8px 0 20px 0;
+	width: 125px;
+	margin: 0 auto;
+}
+
+#contact_form_and_details .form-control {
+	border-radius: 0;
+	font-size: 12px;
+	color: #5B5B5B;
+	line-height: 25px;
+}
+
+#contact_form_and_details .btn.btn-primary {
+	background-color: #7db119;
+	border: 0;
+	border-radius: 0;
+	font-size: 14px;
+	padding: 10px 20px;
+}
+
+#contact_form_and_details .contact-details {
+	border-left: 1px solid #ccc;
+	padding-left: 40px;
+	color: #5A5A5A;
+}
+
+#contact_form_and_details .contact-details a {
+	color: #5A5A5A;
+}
+
+#contact_form_and_details .contact-details h4 {
+	color: #7db119;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+#contact_form_and_details .contact-details i {
+    color: #7db119;
+    padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #contact_form_and_details {
+	background-color: #fafafa;
+	padding: 30px 0;
+	margin-top: 55px;
+}
+
+#contact_form_and_details h1 {
+	margin: 0 auto;
+	text-align: center;
+	color: #7db119;
+}
+
+#contact_form_and_details .container:first-child {
+	padding: 20px 0 20px 0;
+}
+
+#contact_form_and_details h1::after {
+	content: "";
+	display: block;
+	border-bottom: 5px solid #7db119;
+	width: 95px;
+	margin: 0 auto;
+	padding: 7px 0 0 0;
+}
+
+
+
+#name,
+#email,
+#country-code,
+#phone,
+#brief {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+    margin: 30px 0 5px 0;
+}
+
+
+
+#contact_details {    
+    background: #7db119;
+    font-size: 18px;
+	color: #ccc;
+	padding: 50px 40px;
+	margin-top: 30px;
+}
+
+#contact_details h4 {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+#contact_details a {
+	color: #ccc;
+}
+
+
+#btn {
+	padding: 11px 14px;
+	margin: 6px -15px;
+	background-color: #7db119;
+	border: none;
+	color: #ddd;
+} */
+
+
+/* Google map .. */
+
+#google_map
+#google_map .container-fluid,
+#google_map .container-fluid .row,
+#google_map .container-fluid .row .col-12 {
+    padding: 0;
+}
+
+#google_map {
+    margin: 55px 0 0 0;
+}
+
+.mapouter{
+    text-align:right;
+}
+
+.gmap_canvas{
+    overflow:hidden;
+    background:none!important;
+}
+
+
+/* Footer Section ............................. */
+
+footer {
+	background-color: #7db119;
+    padding: 50px 0 0 0;
+}
+
+
+footer .col-md-6 {
+	color: #ccc;
+}
+
+
+footer .col-md-6 .lead {
+	font-size: 18px;
+	margin-top: 25px;
+}
+
+footer .footer_list h4 {
+    color: #ccc;
+    text-align: center;
+}
+
+footer .footer_list .footer_list_one ul,
+footer .footer_list .footer_list_two ul {
+	margin: 0 0 0 0;
+	padding: 10px 0 0 0;
+}
+
+footer .footer_list .footer_list_one ul li,
+footer .footer_list .footer_list_two ul li {
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0px;
+	list-style: none;
+}
+
+footer .footer_list .footer_list_one ul li a,
+footer .footer_list .footer_list_two ul li a {
+	color: #ccc;
+}
+
+
+.sub_footer {
+	background-color: #ececec;
+	height: 70px;
+	color: gray;
+	margin-top: 36px;
+}
+
+.sub_footer p {
+	margin-top: 0;
+	margin-bottom: 0px;
+	padding: 25px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Category page ==================================================================================
+*
+*
+*/
+
+#category_heading,
+#category_heading .container-fluid,
+#category_heading .container-fluid .row,
+#category_heading .container-fluid .row .col-12 {
+    margin: 0;
+    padding: 0;
+}
+
+#category_heading {
+	background: #7db119;
+	background: -moz-radial-gradient(center, ellipse cover, #9ecb2d 0%, #72aa00 51%, #9ecb2d 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #9ecb2d 0%,#72aa00 51%,#9ecb2d 100%);
+	background: radial-gradient(ellipse at center, #9ecb2d 0%,#72aa00 51%,#9ecb2d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9ecb2d', endColorstr='#9ecb2d',GradientType=1 );
+	color: #ddd;
+	text-align: center;
+	padding: 20px 0;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+
+
+/* Image Gallery Section ........................ */
+
+#caterory_image_gallery {
+	background-color: #fafafa;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+@media(max-width: 575px) {
+    #caterory_image_gallery .image_part .col-sm-4:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+#caterory_image_gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+
+/* Category Section ....................... */
+#caterory_image_gallery h1 {
+    color: #7db119;
+    text-align: center;
+}
+
+#caterory_image_gallery h1::after {
+	content: "";
+	display: block;
+	border-bottom: 5px solid #7db119;
+	padding-top: 6px;
+	width: 124px;
+	margin: 0 auto;
+}
+
+#caterory_image_gallery ul.list-group li.list-group-item {
+    background-color: transparent;
+}
+
+#caterory_image_gallery ul.list-group li.list-group-item a {
+    color: #7db119;
+}
+
+#caterory_image_gallery ul.list-group li.list-group-item ::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0a4 ";
+}
+
+#caterory_image_gallery p {
+    padding: 30px 0 30px 15px;
+}
+
+#caterory_image_gallery .image_part {
+	padding: 30px 0px 0px 50px;
+	border-left: 1px solid #ccc;
+}
+
+@media(max-width: 767px) {
+    #caterory_image_gallery .image_part {
+        padding: 30px 0px 0px 0px;
+        border-left: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Impressum page ==================================================================================
+*
+*
+*/
+
+
+#impressum_caterory_and_text_gallery {
+    padding: 50px 0;
+}
+
+#impressum_caterory_and_text_gallery .impressum_part {
+	margin-top: 35px;
+	padding-left: 50px;
+	border-left: 1px solid #ccc;
+}
+
+#impressum_caterory_and_text_gallery .impressum_part i {
+    color: #7db119;
+    padding-right: 5px;
+}
+
+#impressum_caterory_and_text_gallery .impressum_part a {
+    color: #5A5A5A;
+}
+
+#impressum_caterory_and_text_gallery ul.list-group li.list-group-item ::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0a4 ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Über uns page ==================================================================================
+*
+*
+*/
+
+#Über_uns_caterory_and_text_gallery .Über_uns_part {
+	margin-top: 35px;
+	padding-left: 50px;
+	border-left: 1px solid #ccc;
+}
+
+#Über_uns_caterory_and_text_gallery {
+    padding: 50px 0;
+}
+
+#Über_uns_caterory_and_text_gallery ul.list-group li.list-group-item ::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0a4 ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Stellenangebote page ==================================================================================
+*
+*
+*/
+
+#stellenangebote_text_gallery .stellenangebote_part ul li {
+    list-style: none;
+}
+
+#stellenangebote_text_gallery {
+    padding: 50px 0;    
+}
+
+#stellenangebote_text_gallery ul.list-group li.list-group-item ::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0a4 ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+*
+*
+* Datenschutzerklärung page ==================================================================================
+*
+*
+*/
+
+#Daten_text_gallery {
+    padding: 50px 0;    
+}
+
+#Daten_text_gallery ul.list-group li.list-group-item ::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f0a4 ";
+}
